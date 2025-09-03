@@ -56,7 +56,7 @@
 }
 
 #returnToImage{
-    max-width: 10vw;
+    max-width: 13em;
 }
 
 .grid-item-4{
@@ -78,28 +78,35 @@
 }
 
 #lefthand{
-    max-width: 15vw;
-    max-height: 20vh;
+    min-width: 10em;
+    max-width: 20vw;
+    /* max-height: 20vh; */
     float: right;
 }
 
 .grid-item-6{
-    grid-column: span 1;
+    grid-column: span 3;
     justify-self: center;
     align-self: end;
 
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: space-around;
-    height: 100%;
+}
+#observe-container{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    height: parent;
+    width: 100%;
+    justify-content: space-around;
 }
 
 .observe-text{
     margin: 0;
 }
-
 #observe-1{
-    color:  rgb(255, 221, 171);
+    color: rgb(255, 221, 171);
 }
 #observe-2{
     color: rgb(233, 222, 172);
