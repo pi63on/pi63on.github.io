@@ -1,0 +1,708 @@
+// export let conv_dict = {"j":4};
+
+window.addEventListener("load", function(){
+
+    conv_dict = {
+        "a": [
+            1,
+            2,
+            4,
+            7,
+            8,
+            11,
+            12,
+            15,
+            16,
+            19,
+            20,
+            21,
+            22,
+            23,
+            24,
+            27,
+            28,
+            31,
+            32,
+            35,
+            36,
+            39,
+            40,
+            43,
+            44,
+            47
+        ],
+        "b": [
+            0,
+            1,
+            2,
+            4,
+            7,
+            8,
+            11,
+            12,
+            15,
+            16,
+            17,
+            18,
+            20,
+            23,
+            24,
+            27,
+            28,
+            31,
+            32,
+            35,
+            36,
+            39,
+            40,
+            43,
+            44,
+            45,
+            46
+        ],
+        "c": [
+            1,
+            2,
+            4,
+            7,
+            8,
+            12,
+            16,
+            20,
+            24,
+            28,
+            32,
+            36,
+            40,
+            43,
+            45,
+            46
+        ],
+        "d": [
+            0,
+            1,
+            2,
+            4,
+            7,
+            8,
+            11,
+            12,
+            15,
+            16,
+            19,
+            20,
+            23,
+            24,
+            27,
+            28,
+            31,
+            32,
+            35,
+            36,
+            39,
+            40,
+            43,
+            44,
+            45,
+            46
+        ],
+        "e": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            8,
+            12,
+            16,
+            20,
+            21,
+            22,
+            23,
+            24,
+            28,
+            32,
+            36,
+            40,
+            44,
+            45,
+            46,
+            47
+        ],
+        "f": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            8,
+            12,
+            16,
+            20,
+            21,
+            22,
+            24,
+            28,
+            32,
+            36,
+            40,
+            44
+        ],
+        "g": [
+            1,
+            2,
+            4,
+            7,
+            8,
+            12,
+            16,
+            20,
+            22,
+            23,
+            24,
+            27,
+            28,
+            31,
+            32,
+            35,
+            36,
+            39,
+            40,
+            43,
+            45,
+            46
+        ],
+        "h": [
+            0,
+            3,
+            4,
+            7,
+            8,
+            11,
+            12,
+            15,
+            16,
+            19,
+            20,
+            21,
+            22,
+            23,
+            24,
+            27,
+            28,
+            31,
+            32,
+            35,
+            36,
+            39,
+            40,
+            43,
+            44,
+            47
+        ],
+        "i": [
+            0,
+            1,
+            2,
+            5,
+            9,
+            13,
+            17,
+            21,
+            25,
+            29,
+            33,
+            37,
+            41,
+            44,
+            45,
+            46
+        ],
+        "j": [
+            0,
+            1,
+            2,
+            3,
+            7,
+            11,
+            15,
+            19,
+            23,
+            27,
+            31,
+            35,
+            39,
+            40,
+            43,
+            45,
+            46
+        ],
+        "k": [
+            0,
+            3,
+            4,
+            7,
+            8,
+            11,
+            12,
+            15,
+            16,
+            18,
+            20,
+            21,
+            24,
+            26,
+            28,
+            31,
+            32,
+            35,
+            36,
+            39,
+            40,
+            43,
+            44,
+            47
+        ],
+        "l": [
+            0,
+            4,
+            8,
+            12,
+            16,
+            20,
+            24,
+            28,
+            32,
+            36,
+            40,
+            44,
+            45,
+            46,
+            47
+        ],
+        "m": [
+            0,
+            3,
+            4,
+            7,
+            8,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20,
+            21,
+            22,
+            23,
+            24,
+            27,
+            28,
+            31,
+            32,
+            35,
+            36,
+            39,
+            40,
+            43,
+            44,
+            47
+        ],
+        "n": [
+            0,
+            3,
+            4,
+            7,
+            8,
+            9,
+            11,
+            12,
+            13,
+            15,
+            16,
+            17,
+            19,
+            20,
+            21,
+            23,
+            24,
+            26,
+            27,
+            28,
+            30,
+            31,
+            32,
+            34,
+            35,
+            36,
+            38,
+            39,
+            40,
+            43,
+            44,
+            47
+        ],
+        "o": [
+            1,
+            2,
+            4,
+            7,
+            8,
+            11,
+            12,
+            15,
+            16,
+            19,
+            20,
+            23,
+            24,
+            27,
+            28,
+            31,
+            32,
+            35,
+            36,
+            39,
+            40,
+            43,
+            45,
+            46
+        ],
+        "p": [
+            0,
+            1,
+            2,
+            4,
+            7,
+            8,
+            11,
+            12,
+            15,
+            16,
+            19,
+            20,
+            21,
+            22,
+            24,
+            28,
+            32,
+            36,
+            40,
+            44
+        ],
+        "r": [
+            0,
+            1,
+            2,
+            4,
+            7,
+            8,
+            11,
+            12,
+            15,
+            16,
+            19,
+            20,
+            21,
+            22,
+            24,
+            27,
+            28,
+            31,
+            32,
+            35,
+            36,
+            39,
+            40,
+            43,
+            44,
+            47
+        ],
+        "s": [
+            1,
+            2,
+            3,
+            4,
+            8,
+            12,
+            16,
+            21,
+            22,
+            27,
+            31,
+            35,
+            39,
+            43,
+            44,
+            45,
+            46
+        ],
+        "t": [
+            0,
+            1,
+            2,
+            3,
+            6,
+            10,
+            14,
+            18,
+            22,
+            26,
+            30,
+            34,
+            38,
+            42,
+            46
+        ],
+        "u": [
+            0,
+            3,
+            4,
+            7,
+            8,
+            11,
+            12,
+            15,
+            16,
+            19,
+            20,
+            23,
+            24,
+            27,
+            28,
+            31,
+            32,
+            35,
+            36,
+            39,
+            40,
+            43,
+            45,
+            46
+        ],
+        "v": [
+            0,
+            3,
+            4,
+            7,
+            8,
+            11,
+            12,
+            15,
+            16,
+            19,
+            21,
+            23,
+            25,
+            27,
+            29,
+            31,
+            33,
+            35,
+            38,
+            42,
+            46
+        ],
+        "w": [
+            0,
+            3,
+            4,
+            7,
+            8,
+            11,
+            12,
+            15,
+            16,
+            19,
+            20,
+            23,
+            24,
+            27,
+            28,
+            29,
+            30,
+            31,
+            32,
+            33,
+            34,
+            35,
+            37,
+            38,
+            41,
+            42,
+            45,
+            46
+        ],
+        "x": [
+            0,
+            3,
+            4,
+            7,
+            8,
+            11,
+            12,
+            15,
+            16,
+            19,
+            21,
+            22,
+            25,
+            26,
+            28,
+            31,
+            32,
+            35,
+            36,
+            39,
+            40,
+            43,
+            44,
+            47
+        ],
+        "y": [
+            0,
+            3,
+            4,
+            7,
+            8,
+            11,
+            12,
+            15,
+            16,
+            19,
+            20,
+            21,
+            22,
+            25,
+            29,
+            33,
+            37,
+            41,
+            45
+        ],
+        "z": [
+            0,
+            1,
+            2,
+            3,
+            7,
+            11,
+            15,
+            18,
+            22,
+            25,
+            29,
+            32,
+            36,
+            40,
+            44,
+            45,
+            46,
+            47
+        ]
+        }
+
+    var window1 = document.getElementById("Layer_1");
+    var window2 = document.getElementById("Layer_2");
+    var window3 = document.getElementById("Layer_3");
+
+    var windowPols1 = Array.from(window1.querySelectorAll("polygon"));
+    var windowPols2 = Array.from(window2.querySelectorAll("polygon"));
+    var windowPols3 = Array.from(window3.querySelectorAll("polygon"));
+
+    // draw in 
+    for (let i = 0; i < windowPols1.length; i++) {
+    windowPols1[i].addEventListener("click", function() {
+        if (windowPols1[i].style.getPropertyValue("fill") == "rgb(0, 102, 255)"){
+            windowPols1[i].style.fill = "rgba(0, 0, 0, 0)";
+        } else {
+            windowPols1[i].style.fill = "rgba(0, 102, 255, 1)";
+        }
+        });
+    }
+    for (let i = 0; i < windowPols2.length; i++) {
+    windowPols2[i].addEventListener("click", function() {
+        if (windowPols2[i].style.getPropertyValue("fill") == "rgb(0, 102, 255)"){
+            windowPols2[i].style.fill = "rgba(0, 0, 0, 0)";
+        } else {
+            windowPols2[i].style.fill = "rgba(0, 102, 255, 1)";
+        }
+        });
+    }
+    for (let i = 0; i < windowPols3.length; i++) {
+    windowPols3[i].addEventListener("click", function() {
+        if (windowPols3[i].style.getPropertyValue("fill") == "rgb(0, 102, 255)"){
+            windowPols3[i].style.fill = "rgba(0, 0, 0, 0)";
+        } else {
+            windowPols3[i].style.fill = "rgba(0, 102, 255, 1)";
+        }
+        });
+    }
+
+    // read out drawn in
+    
+    // document.getElementById("submitbutton").addEventListener("click", function(){
+    //     var letter = document.getElementById('textbox').value;
+    //     conv_dict[letter] = [];
+    //     for (var i = 0; i < windowPols1.length; i++) {
+    //         if (windowPols1[i].style.getPropertyValue("fill") == "rgb(0, 102, 255)"){
+    //             conv_dict[letter].push(i);
+    //         }
+    //     }
+    //     console.log(conv_dict);
+    // })
+
+    
+    // light up submitted letters
+    document.getElementById("submitbutton").addEventListener("click", function(){
+        // clear all 
+        for (let i=0 ; i < windowPols1.length; i++ ){
+            windowPols1[i].style.fill = "rgba(0, 0, 0, 0)";
+        }
+        for (let i=0 ; i < windowPols2.length; i++ ){
+            windowPols2[i].style.fill = "rgba(0, 0, 0, 0)";
+        }
+        for (let i=0 ; i < windowPols3.length; i++ ){
+            windowPols3[i].style.fill = "rgba(0, 0, 0, 0)";
+        }
+
+        // get input
+        var input = document.getElementById('textbox').value;
+        for (var i=0; i < input.length; i++) {
+            toFill = conv_dict[input[i]];
+            if (i == 0){
+                for (var j = 0; j < toFill.length; j++) {
+                    windowPols1[toFill[j]].style.fill = "rgba(255, 216, 88, 0.89)";
+                }
+            }
+            if (i == 1){
+                for (var j = 0; j < toFill.length; j++) {
+                    windowPols2[toFill[j]].style.fill = "rgba(255, 216, 88, 0.89)";
+                }
+            }
+            if (i == 2){
+                for (var j = 0; j < toFill.length; j++) {
+                    windowPols3[toFill[j]].style.fill = "rgba(255, 216, 88, 0.89)";
+                }
+            }
+        }
+    });
+    // clear button
+    document.getElementById("clearButton").addEventListener("click", function(){
+        for (let i=0 ; i < windowPols1.length; i++ ){
+            windowPols1[i].style.fill = "rgba(0, 0, 0, 0)";
+        }
+        for (let i=0 ; i < windowPols2.length; i++ ){
+            windowPols2[i].style.fill = "rgba(0, 0, 0, 0)";
+        }
+        for (let i=0 ; i < windowPols3.length; i++ ){
+            windowPols3[i].style.fill = "rgba(0, 0, 0, 0)";
+        }
+    });
+
+
+});
