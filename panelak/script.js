@@ -606,6 +606,7 @@ window.addEventListener("load", function(){
         ]
         }
 
+    
     var window1 = document.getElementById("Layer_1");
     var window2 = document.getElementById("Layer_2");
     var window3 = document.getElementById("Layer_3");
@@ -613,34 +614,20 @@ window.addEventListener("load", function(){
     var windowPols1 = Array.from(window1.querySelectorAll("polygon"));
     var windowPols2 = Array.from(window2.querySelectorAll("polygon"));
     var windowPols3 = Array.from(window3.querySelectorAll("polygon"));
-
+    
+    let windows = [windowPols1, windowPols2, windowPols3]
+    
     // draw in 
-    for (let i = 0; i < windowPols1.length; i++) {
-    windowPols1[i].addEventListener("click", function() {
-        if (windowPols1[i].style.getPropertyValue("fill") == "rgb(0, 102, 255)"){
-            windowPols1[i].style.fill = "rgba(0, 0, 0, 0)";
-        } else {
-            windowPols1[i].style.fill = "rgba(0, 102, 255, 1)";
+    for (let k = 0; k < windows.length; k++) {
+        for (let i = 0; i < windows[k].length; i++) {
+        windows[k][i].addEventListener("click", function() {
+            if (windows[k][i].style.getPropertyValue("fill") == "rgba(0, 0, 0,0)"){
+                windows[k][i].style.fill = "rgba(0, 0, 0, 0)";
+            } else {
+                windows[k][i].style.fill = "rgba(0, 102, 255, 1)";
+            }
+            });
         }
-        });
-    }
-    for (let i = 0; i < windowPols2.length; i++) {
-    windowPols2[i].addEventListener("click", function() {
-        if (windowPols2[i].style.getPropertyValue("fill") == "rgb(0, 102, 255)"){
-            windowPols2[i].style.fill = "rgba(0, 0, 0, 0)";
-        } else {
-            windowPols2[i].style.fill = "rgba(0, 102, 255, 1)";
-        }
-        });
-    }
-    for (let i = 0; i < windowPols3.length; i++) {
-    windowPols3[i].addEventListener("click", function() {
-        if (windowPols3[i].style.getPropertyValue("fill") == "rgb(0, 102, 255)"){
-            windowPols3[i].style.fill = "rgba(0, 0, 0, 0)";
-        } else {
-            windowPols3[i].style.fill = "rgba(0, 102, 255, 1)";
-        }
-        });
     }
 
     // read out drawn in
@@ -660,47 +647,28 @@ window.addEventListener("load", function(){
     // light up submitted letters
     document.getElementById("submitbutton").addEventListener("click", function(){
         // clear all 
-        for (let i=0 ; i < windowPols1.length; i++ ){
-            windowPols1[i].style.fill = "rgba(0, 0, 0, 0)";
-        }
-        for (let i=0 ; i < windowPols2.length; i++ ){
-            windowPols2[i].style.fill = "rgba(0, 0, 0, 0)";
-        }
-        for (let i=0 ; i < windowPols3.length; i++ ){
-            windowPols3[i].style.fill = "rgba(0, 0, 0, 0)";
+        for (let k = 0; k < windows.length; k++){
+            for (let i=0 ; i < windows[k].length; i++ ){
+                windows[k][i].style.fill = "rgba(0, 0, 0, 0)";
+            }
         }
 
         // get input
         var input = document.getElementById('textbox').value;
         for (var i=0; i < input.length; i++) {
             toFill = conv_dict[input[i]];
-            if (i == 0){
-                for (var j = 0; j < toFill.length; j++) {
-                    windowPols1[toFill[j]].style.fill = "rgba(255, 216, 88, 0.89)";
-                }
-            }
-            if (i == 1){
-                for (var j = 0; j < toFill.length; j++) {
-                    windowPols2[toFill[j]].style.fill = "rgba(255, 216, 88, 0.89)";
-                }
-            }
-            if (i == 2){
-                for (var j = 0; j < toFill.length; j++) {
-                    windowPols3[toFill[j]].style.fill = "rgba(255, 216, 88, 0.89)";
-                }
+            for (var j = 0; j < toFill.length; j++) {
+                windows[i][toFill[j]].style.fill = "rgba(255, 205, 42, 0.5)";
+                windows[i][toFill[j]].style.filter = "drop-shadow(0px 0px 1vh rgba(255, 208, 88, 0.9) drop-shadow(0px 0px .4vh rgba(255, 208, 88, 0.9)";
             }
         }
     });
     // clear button
     document.getElementById("clearButton").addEventListener("click", function(){
-        for (let i=0 ; i < windowPols1.length; i++ ){
-            windowPols1[i].style.fill = "rgba(0, 0, 0, 0)";
-        }
-        for (let i=0 ; i < windowPols2.length; i++ ){
-            windowPols2[i].style.fill = "rgba(0, 0, 0, 0)";
-        }
-        for (let i=0 ; i < windowPols3.length; i++ ){
-            windowPols3[i].style.fill = "rgba(0, 0, 0, 0)";
+        for (let k = 0; k < windows.length; k ++ ){
+            for (let i=0 ; i < windows[k].length; i++ ){
+                windows[k][i].style.fill = "rgba(0, 0, 0, 0)";
+            }
         }
     });
 
