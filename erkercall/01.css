@@ -21,6 +21,8 @@
     align-content: space-around;
     height: 300vh;
 
+    margin-bottom: 10vh;
+
 }
 
 /* .grid-item{
@@ -236,3 +238,8 @@
 #mindImage{
     float:left
 }
+
+/* #bottom-spacer{
+    grid-column: span 4;
+    height: 
+} */
