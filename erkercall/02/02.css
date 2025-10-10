@@ -9,7 +9,7 @@
     width: 96vw;
     
     display: grid;
-    grid-template-columns: repeat(6. 10vw); 
+    /* grid-template-columns: repeat(6, 10vw);  */
     grid-template-rows: auto;
     justify-content: left ;   
 
@@ -24,8 +24,7 @@
     padding: 1em;
     height: max-content;
 
-    transition-duration: 1s;
-    transition-property: color border;
+    transition: color 1s, border 1s;
 }
 
 #p1{
@@ -69,12 +68,13 @@
     visibility: hidden;
     opacity: 0;
 
-    transition-duration: 1s;
-    transition-property: visibility 0s, opacity 2s;
+    /* transition-duration: 1s; */
+    transition: visibility 0s, opacity 2s;
 }
 
 img{
     width: 100%;
+    min-height: 90vh;
     /* height: 100%; */
 }
 
@@ -87,15 +87,14 @@ img{
 
     top: 60vh;
     left: 40vw;
-    background-color: 'white';
     padding: 1em;
     line-height: 2em;
     border: 1px solid blue;
     color: white;
     font-weight: 800;
 
-    transition-duration: 1s;
-    transition-property: visibility 0s, opacity 2s;
+    /* transition-duration: 1s; */
+    transition: visibility 0s, opacity 2s;
 
 }
 
