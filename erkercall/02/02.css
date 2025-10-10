@@ -1,0 +1,50 @@
+* {
+    font-family: sans-serif;
+}
+#flex-container{
+    position:absolute;
+    top:0;
+    left:0;
+    width: 400vw;
+
+    flex-direction: row;
+    column-width: 100px;
+
+    /* align-content: space-around; */
+    justify-content: space-around;
+
+    margin-top: 10vh;
+    margin-left: 2em;
+}
+
+.texty{
+    width: 10em;
+    border: 1px solid blue;
+}
+
+#manyu_img{
+    width: 98vw;
+    height: 100vh;
+    display: none;
+}
+
+img{
+    width: 100%;
+    /* height: 100%; */
+}
+
+#resolution{
+    font-size: larger;
+    display: none;
+    position: absolute;
+    top: 50vh;
+    left: 40vw;
+    background-color: 'white';
+    padding: 1em;
+    line-height: 2em;
+    border: 1px solid blue;
+    color: white;
+    font-weight: 800;
+
+}
+

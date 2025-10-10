@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>mehification</title>
+        <link rel="stylesheet" type="text/css" href="02.css">
+    </head>
+    <body>
+        <div id="manyu_img">
+            <img src="ims/mend3.jpg">
+        </div>
+        <div id="flex-container">
+
+            <div class='texty' id="p1">
+                <p>
+                    weird times?
+                    are you checking out?
+                </p>
+            </div>
+            <div class='texty' id="p2">
+                <p >
+                    mandatory presence
+                    rollcall
+                    mandatory presence in a defined space
+                </p>
+            </div>
+            <div class='texty' id="p3">
+                <p>
+                    fragments
+                    time split in parts
+                    fragmented existence
+                </p>
+            </div>
+            <div class='texty' id="p4">
+                <p>
+                    traversing space
+                    in planes, cars, trains
+                    rate of awareness
+                    un-embodied space
+                    or a space partially embodied
+                </p>
+            </div>
+            <div class='texty' id="p5">
+                <p>
+                    how many ways can you leave yourself behind
+                    will there be more of me
+                    or less?
+                </p>
+            </div>
+            <div class='texty' id="p6">
+                <p>
+                    is it in layers
+                    or chunks
+                    - the pattern of your awareness
+                    at all times or at this point?
+                </p>
+            </div>
+        </div>
+        <div id="resolution">
+<pre>
+mending 
+container and continuity 
+freeform and expanding 
+running through a field</pre>
+        </div>
+        <script>
+            const overlay = document.getElementById("manyu_img");
+            const collection = document.getElementsByClassName("texty");
+            const resolText = document.getElementById("resolution");
+            for (let i = 0; i < collection.length; i++) {
+                collection[i].addEventListener("click", function() {
+                    overlay.style.display = "block";
+                    resolText.style.display = "block";
+                })};
+        </script>
+    </body>
+</html>
