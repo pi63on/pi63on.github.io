@@ -5,10 +5,12 @@
     position:absolute;
     top:0;
     left:0;
-    width: 400vw;
+    width: 200vw;
+    height: 30vh;
 
     flex-direction: row;
-    column-width: 100px;
+    column-width: 200px;
+
 
     /* align-content: space-around; */
     justify-content: space-around;
@@ -18,8 +20,27 @@
 }
 
 .texty{
-    width: 10em;
+    /* width: 10em; */
     border: 1px solid blue;
+}
+
+#p1{
+    columns: 1;
+}
+#p2{
+    columns: 2;
+}
+#p3{
+    columns: 3;
+}
+#p4{
+    columns: 4;
+}
+#p5{
+    columns: 5;
+}
+#p6{
+    columns: 6;
 }
 
 #manyu_img{
