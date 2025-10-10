@@ -1,52 +1,76 @@
 * {
     font-family: sans-serif;
+
 }
 #flex-container{
     position:absolute;
     top:0;
     left:0;
-    width: 200vw;
-    height: 30vh;
-
-    flex-direction: row;
-    column-width: 200px;
-
-
-    /* align-content: space-around; */
-    justify-content: space-around;
+    width: 96vw;
+    
+    display: grid;
+    grid-template-columns: repeat(6. 10vw); 
+    grid-template-rows: auto;
+    justify-content: left ;   
 
     margin-top: 10vh;
     margin-left: 2em;
 }
 
 .texty{
-    /* width: 10em; */
     border: 1px solid blue;
+    font-weight: 100;
+    width: 9vw;
+    padding: 1em;
+    height: max-content;
+
+    transition-duration: 1s;
+    transition-property: color border;
 }
 
 #p1{
-    columns: 1;
+    grid-column: 1;
+    
+    margin-left: -10px;
 }
 #p2{
-    columns: 2;
+    grid-column: 2;
+    
+    margin-left: -1em;
+    margin-top: 3em;
 }
 #p3{
-    columns: 3;
+    grid-column: 3;
+    
+    margin-left: -4em;
 }
 #p4{
-    columns: 4;
+    grid-column: 4;
+    
+    margin-left: -1em;
+    margin-top: 2em;
 }
 #p5{
-    columns: 5;
+    grid-column: 5;
+    
+    margin-left: -3em;
+    margin-top: 3em;
 }
 #p6{
-    columns: 6;
+    grid-column: 6;
+    
+    margin-left: -2em;
+    margin-top: -2em;
 }
 
 #manyu_img{
     width: 98vw;
     height: 100vh;
-    display: none;
+    visibility: hidden;
+    opacity: 0;
+
+    transition-duration: 1s;
+    transition-property: visibility 0s, opacity 2s;
 }
 
 img{
@@ -55,10 +79,13 @@ img{
 }
 
 #resolution{
-    font-size: larger;
-    display: none;
+    visibility: hidden;
+    opacity: 0;
     position: absolute;
-    top: 50vh;
+
+    font-size: larger;
+
+    top: 60vh;
     left: 40vw;
     background-color: 'white';
     padding: 1em;
@@ -66,6 +93,9 @@ img{
     border: 1px solid blue;
     color: white;
     font-weight: 800;
+
+    transition-duration: 1s;
+    transition-property: visibility 0s, opacity 2s;
 
 }
 

@@ -12,45 +12,45 @@
 
             <div class='texty' id="p1">
                 <p>
-                    weird times?
+                    weird times? <br>
                     are you checking out?
                 </p>
             </div>
             <div class='texty' id="p2">
                 <p >
-                    mandatory presence
-                    rollcall
+                    mandatory presence <br>
+                    rollcall <br>
                     mandatory presence in a defined space
                 </p>
             </div>
             <div class='texty' id="p3">
                 <p>
-                    fragments
-                    time split in parts
+                    fragments <br>
+                    time split in parts <br>
                     fragmented existence
                 </p>
             </div>
             <div class='texty' id="p4">
                 <p>
-                    traversing space
-                    in planes, cars, trains
-                    rate of awareness
-                    un-embodied space
+                    traversing space <br>
+                    in planes, cars, trains <br>
+                    rate of awareness <br>
+                    un-embodied space <br>
                     or a space partially embodied
                 </p>
             </div>
             <div class='texty' id="p5">
                 <p>
-                    how many ways can you leave yourself behind
-                    will there be more of me
+                    how many ways can you leave yourself behind <br>
+                    will there be more of me <br>
                     or less?
                 </p>
             </div>
             <div class='texty' id="p6">
                 <p>
-                    is it in layers
-                    or chunks
-                    - the pattern of your awareness
+                    is it in layers <br>
+                    or chunks <br>
+                    - the pattern of your awareness <br>
                     at all times or at this point?
                 </p>
             </div>
@@ -66,11 +66,37 @@ running through a field</pre>
             const overlay = document.getElementById("manyu_img");
             const collection = document.getElementsByClassName("texty");
             const resolText = document.getElementById("resolution");
+
             for (let i = 0; i < collection.length; i++) {
+                collection[i].addEventListener("mouseover", function(){
+                    blendOut(collection);
+                    collection[i].style.color = "black";
+                    collection[i].style.backgrouns =  'white';
+                    collection[i].style.border = "1px solid blue";
+                });
+                collection[i].addEventListener("mouseout", function(){
+                    blendIn(collection);
+                });
                 collection[i].addEventListener("click", function() {
-                    overlay.style.display = "block";
-                    resolText.style.display = "block";
+                    overlay.style.visibility = "visible";
+                    overlay.style.opacity = "1";
+                    resolText.style.visibility = "visible";
+                    resolText.style.opacity = "1";
                 })};
+            
+            function blendOut(col){
+                for (let i = 0; i < col.length; i++) {
+                    col[i].style.color = "rgba(0,0,0,0)";
+                    col[i].style.border = "1px solid rgba(0, 0, 255, 0.3)";
+                }
+            };
+            function blendIn(col){
+                for (let i = 0; i < col.length; i++) {
+                    col[i].style.color = "black";
+                    col[i].style.border = '1px solid blue';
+                }
+            };
+            
         </script>
     </body>
 </html>
