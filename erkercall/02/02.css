@@ -2,6 +2,9 @@
     font-family: sans-serif;
 
 }
+body{
+    width: 1000px;
+}
 #flex-container{
     position:absolute;
     top:0;
