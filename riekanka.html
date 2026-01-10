@@ -3,6 +3,9 @@
     <head><title>riekanka</title>
     <link rel="stylesheet" href="riekanka.css" >
     </head>
+
+    
+
     <body>
         <div id="intro-container">
 
@@ -27,29 +30,47 @@
 
         <div id="video-row">
             <div id="videos">
-                <iframe src="https://player.vimeo.com/video/1153212071?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479&amp;autoplay=1&amp;loop=1&amp;controls=0" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" title="Riekanka trailer"></iframe>
+                <!-- <button onclick="pause_video()">pause</button>
+    <script>
+    function pause_video() {
+    let player = document.getElementById("vid1");
+    player.mute();
+    // let data = { method: "pause" };
+    // player.contentWindow.postMessage(JSON.stringify(data), "*");
+    }
+    </script>
+
+    <button onclick="play_video()">play</button>
+    <script>
+    function play_video() {
+    let player = document.getElementById("vid1");
+    let data = { method: "play" };
+    player.contentWindow.postMessage(JSON.stringify(data), "*");
+    }
+    </script> -->
+                <iframe id="vid1" src="https://player.vimeo.com/video/1153212071?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479&amp;autoplay=1&amp;loop=1&amp;controls=1" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" title="Riekanka trailer"></iframe>
             </div>
             <div id="videos">
-                <iframe src="https://player.vimeo.com/video/1153212106?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479&amp;autoplay=1&amp;loop=1&amp;controls=0" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin"  title="Riekanka Interactions"></iframe>
+                <iframe src="https://player.vimeo.com/video/1153212106?badge=0&amp;autopause=1&amp;player_id=0&amp;app_id=58479&amp;autoplay=0&amp;loop=1&amp;controls=1" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin"  title="Riekanka Interactions"></iframe>
             </div>
         </div>
         <!-- <script src="https://player.vimeo.com/api/player.js"></script> -->
 
-        <h2>installation placement</h2>
+        <h2>photo-documentation: installation</h2>
         <div class="img-container" id="ims-of-set">
             <img src="riekanka/fotky/of set/1O0A8345.JPG">
             <img src="riekanka/fotky/of set/1O0A8383.JPG">
             <img src="riekanka/fotky/of set/1O0A8466.JPG">
             <img src="riekanka/fotky/of set/1O0A8575.JPG">
         </div>
-        <h2>water surface modulations</h2>
+        <h2>photo-documentation: water surface modulations</h2>
         <div class="img-container">
             <img src="riekanka/fotky/of water surface/1O0A8375.JPG">
             <img id="handseries" src="riekanka/fotky/of water surface/1O0A8567.JPG">
             <img id="handseries" src="riekanka/fotky/of water surface/1O0A8569.JPG">
             <img id="handseries" src="riekanka/fotky/of water surface/1O0A8570.JPG">
         </div>
-        <h2>audience interactions</h2>
+        <h2>photo-documentation: audience interactions</h2>
         <div class="img-container">
             <img src="riekanka/fotky/of people interacting/1O0A8353.JPG">
             <img src="riekanka/fotky/of people interacting/1O0A8351.JPG">
@@ -59,4 +80,13 @@
         </div>
 
     </body>
+    <script>
+    function controlVideo(vidFunc) {
+        var iframe = document.getElementsByTagName("vid1")[0].contentWindow;
+        iframe.postMessage(
+            '{"event":"command","func":"' + vidFunc + '","args":""}',
+            "*"
+        );
+        }
+    </script>
 </html>
