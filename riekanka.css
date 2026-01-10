@@ -1,0 +1,13 @@
+img {
+    width: 40%;
+}
+#handseries {
+    width: 30%;
+    margin: 1%;
+}
+#coverimg {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
+}
